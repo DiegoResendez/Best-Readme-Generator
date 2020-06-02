@@ -19,12 +19,12 @@ const questions = [
         name: "tableOfContents"
     },
     {
-        type: "input",
+        type: "editor",
         message: "Enter an Installation Guide:",
         name: "installation"
     },
     {
-        type: "input",
+        type: "editor",
         message: "Enter Usage Guide:",
         name: "usage"
     },
@@ -69,7 +69,7 @@ function init() {
         .prompt(questions)
         .then( (response) => {
             console.log(response);
-            writeToFile("README_test.md", generateMarkdown(response));
+            writeToFile("README.md", generateMarkdown(response));
         });
 }
 

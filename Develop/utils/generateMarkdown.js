@@ -37,16 +37,14 @@ function generateTOC(tableOfContents) {
 }
 
 function generateInstallation(installation) {
-  return `
-## Installation
+  return `## Installation
 ${installation}
 
 `;
 }
 
 function generateUsage(usage) {
-  return `
-## Usage
+  return `## Usage
 ${usage}
 
 `;
@@ -68,7 +66,7 @@ function generateLicense(license) {
     }
     else if (element === 'AGPL') {
       lic += `
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+* [![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
 `;
     }
   });
@@ -82,7 +80,7 @@ function generateContributing(contributing) {
 
   contributors.forEach(element => {
     cont += `
-* @${element}
+* [${element}](http://github.com/${element})
 `;
   });
 
